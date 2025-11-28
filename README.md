@@ -50,7 +50,8 @@ tic-tac-toe/
 - Aplikacja serwera loguje w konsoli kluczowe dane.
 - chat pomiędzy użytkownikami z TCP/IP.
 - Gniazda otworzone pomiędzy grającymi użytkownikami.
-- Serwer udostępnia iformację o adresach IP użytkowników.
+- Serwer udostępnia informację o adresach IP użytkowników.
+
 ![image](https://github.com/user-attachments/assets/e624110e-2d44-481f-a49f-e2ecf4c448df)
 
 ## Wymagania
