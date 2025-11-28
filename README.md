@@ -1,8 +1,4 @@
 # Kółko i krzyżyk (klient - serwer)
-### Zrobione
-- klient łączy się z serwerem. Może stworzyć swój pokój, albo dołączyć do innego, w którym jest 1 osoba.
-- wychodzenie z pokoju
-- markowanie ready
 
 ### Struktura plików
 ```
@@ -47,23 +43,14 @@ tic-tac-toe/
 ## Funkcjonalności
 1. **Hybrydowa komunikacja sieciowa** - użycie zarówno komunikacji poprzez RMI jak i gniazd TCP/IP.
 2. **Mechanika gry** - implementacja silnika zarządzającego mechaniką gry w kółko i krzyżyk
-- Należy wykorzystać mechanizm RMI w celu nawiązania połączenia między dwoma graczami oraz obsługę mechaniki gry (np. parowanie graczy, inicjalizowanie stanu gry, wymiana ruchów, walidacja I/O).
-- Mechanika gry powinna być zaimplementowana w aplikacji serwera.
-- Należy przemyśleć argumenty pobierane przez aplikacje JAR serwer/klient.
-- Serwer powinen obsługiwać więcej niż jednego gracza w tym samym momencie (np. poprzez realizację gier w dedykowanych pokojach lub tworzenie tokenów poszczególnych sesji wymienianych przez graczy).
-- Serwer powinen obliczać statystyki graczy w danej sesji - ilość wygranych, remisów oraz porażek.
-- Aplikacja serwera powinna logować w konsoli kluczowe dane (parowanie użytkowników, błędy, koniec gry, itp).
-- zalecane java.nio
-
-## GRUPA A
-klient podlacza sie do serwera, nie ma nikogo innego to czeka <br>
-podlacza sie drugi gracz i moze zdecydowac czy chce grac z 1 czy czeka<br>
-Czat bez udzialu serwera<br>
-Serwer prowadzi informacje o polaczonych klientach (adresach ip) i kazdy kazdy gracz moze sobie pobrac ip drugiego gracza i nawiazac komunikacje po danym porcie. <br>
-
-- chat pomiędzy użytkownikami z TCP/IP
-- Gniazda powinny być otworzone pomiędzy grającymi użytkownikami
-- Serwer udostępnia iformacjęo adresach IP użytkowników
+- Wykorzystany mechanizm RMI w celu nawiązania połączenia między dwoma graczami oraz obsługę mechaniki gry.
+- Mechanika gry zaimplementowana w aplikacji serwera.
+- Serwer obsługuje więcej niż jednego gracza w tym samym momencie poprzez realizację gier w dedykowanych pokojach.
+- Serwer oblicza statystyki graczy w danej sesji - ilość wygranych, remisów oraz porażek.
+- Aplikacja serwera loguje w konsoli kluczowe dane.
+- chat pomiędzy użytkownikami z TCP/IP.
+- Gniazda otworzone pomiędzy grającymi użytkownikami.
+- Serwer udostępnia iformację o adresach IP użytkowników.
 ![image](https://github.com/user-attachments/assets/e624110e-2d44-481f-a49f-e2ecf4c448df)
 
 ## Wymagania
@@ -74,11 +61,27 @@ Serwer prowadzi informacje o polaczonych klientach (adresach ip) i kazdy kazdy g
 5. Obsługa mechaniki pokojów (gracze nie są parowami losowego)
 6. Implementacja funkcjonalności chatu pomiędzy dwoma graczami z wykorzystaniem mechanizmu gniazd TCP/IP.
 
-## Ocena
-1. Aplikacja rozdzielona na 2 archiwa jar (klient, serwer)
-2. Zaimplementowana poprawna mechanika gry
-3. Mechanizm zbierania podstawowych statystyk (wygrane, porazki, remisy)
-4. Rozgrywka klient-serwer za pomocą RMI
-5. Obsługa N klientów
-6. Mechanizm parowanie graczy (pokoje, tokeny, ...)
-7. Implementacja funkcjonalności chatu za pomocą protokołu TCP/IP
+
+### Uruchamianie
+#### Serwer
+```bash
+java -jar server.jar <port>
+```
+![Logowanie historii działań klientów](https://github.com/user-attachments/assets/350f3bf6-bddc-4fff-a8db-49d1fa5a6a86)
+
+#### Klient
+```bash
+java -jar client.jar <server_port> <username>
+```
+![Polecenia](https://github.com/user-attachments/assets/5a196179-ec54-43df-a8d8-631cd9c1cebe)
+![Widok z rozgrywki z czatem](https://github.com/user-attachments/assets/71351515-fcaf-4429-998d-41d9d6904d2c)
+
+
+
+
+
+
+
+
+
+
