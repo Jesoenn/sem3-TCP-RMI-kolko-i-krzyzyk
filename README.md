@@ -68,6 +68,7 @@ tic-tac-toe/
 ```bash
 java -jar server.jar <port>
 ```
+### Logowanie historii działań klientów
 ![Logowanie historii działań klientów](https://github.com/user-attachments/assets/350f3bf6-bddc-4fff-a8db-49d1fa5a6a86)
 
 #### Klient
