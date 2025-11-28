@@ -74,8 +74,10 @@ java -jar server.jar <port>
 ```bash
 java -jar client.jar <server_port> <username>
 ```
+### Dostępne polecenia
 ![Polecenia](https://github.com/user-attachments/assets/5a196179-ec54-43df-a8d8-631cd9c1cebe)
 
+### Widok z rozgrywki z czatem
 ![Widok z rozgrywki z czatem](https://github.com/user-attachments/assets/71351515-fcaf-4429-998d-41d9d6904d2c)
 
 
